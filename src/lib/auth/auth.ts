@@ -67,6 +67,6 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         strategy: "jwt",
         maxAge: 24 * 60 * 60, // 24 hours
     },
-    secret: process.env.AUTH_SECRET || "dev-secret-key-for-local-development-only",
+    secret: process.env.NEXTAUTH_SECRET || "dev-secret-key-for-local-development-only",
     trustHost: true,
 });
